@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit>
+    <testsuites>
+        <testsuite name="all">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <var name="PDO_DSN" value="mysql:host=localhost;dbname=yesim_test" />
+        <var name="PDO_USERNAME" value="yesim_test" />
+        <var name="PDO_PASSWORD" value="super_yesim_pass" />
+    </php>
+</phpunit>
