@@ -26,7 +26,7 @@ updated_at - datetime - дата обновления элемента\
 Тестовое задание необходимо выложить на репозитории, GitHub дать доступ, если приватный репозиторий.
 
 ## Database structure
-```
+```sql
 CREATE TABLE `item` (
   `id` int NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -55,7 +55,7 @@ ALTER TABLE `logger_table`
 ## Usage
 
 See `public/api/index.php` for usage example.
-```
+```php
 $app = new ApiApp();
 $app->initDatabase(PDO_DSN, PDO_USERNAME, PDO_PASSWORD, true);
 
