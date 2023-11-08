@@ -9,6 +9,7 @@ use Altan\YesimTest\Tools\Auth\BearerAuth;
 use Altan\YesimTest\Tools\Db\DatabaseInterface;
 use Altan\YesimTest\Tools\Db\MysqlDb;
 use Altan\YesimTest\View\JsonView;
+use Altan\YesimTest\View\View;
 
 class ApiApp
 {
@@ -33,7 +34,7 @@ class ApiApp
         }
     }
 
-    public function getView(string $status, array $data): JsonView
+    public function getView(string $status, array $data): View
     {
         return new JsonView($status, $data);
     }
