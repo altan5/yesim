@@ -13,7 +13,7 @@ class ItemController extends Controller
     /**
      * __construct
      *
-     * @param  mixed $db
+     * @param  DatabaseInterface $db
      * @return void
      */
     public function __construct(DatabaseInterface $db)

@@ -15,11 +15,22 @@ class JsonView extends View
     public function write(): void
     {
         $this->writeData($this->data);
-    }
+    }    
+    /**
+     * writeError
+     *
+     * @return void
+     */
     public function writeError(): void
     {
         $this->writeData($this->data);
-    }
+    }    
+    /**
+     * writeData
+     *
+     * @param  mixed $data
+     * @return void
+     */
     private function writeData($data): void
     {
         http_response_code($this->status);

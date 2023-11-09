@@ -2,17 +2,30 @@
 
 namespace Altan\YesimTest\Tools\Auth;
 
+/**
+ * BearerAuth
+ */
 class BearerAuth implements AuthInterface
 {
     private static $active_tokens = [
         "some_token1"
-    ];
+    ];    
+    /**
+     * check
+     *
+     * @return bool
+     */
     public function check(): bool
     {
         $token = $this->getBearerToken();
         return array_search($token, self::$active_tokens) !== false;
     }
-
+    
+    /**
+     * getAuthorizationHeader
+     *
+     * @return string
+     */
     private function getAuthorizationHeader(): ?string
     {
         $headers = null;
@@ -35,7 +48,12 @@ class BearerAuth implements AuthInterface
         }
         return $headers;
     }
-
+    
+    /**
+     * getBearerToken
+     *
+     * @return string
+     */
     private function getBearerToken(): ?string
     {
         $headers = $this->getAuthorizationHeader();
